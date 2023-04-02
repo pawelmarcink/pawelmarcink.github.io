@@ -1,7 +1,6 @@
 layout: page
 title: "A new page"
 permalink:/new_page/
-  <body>
 
 <h1>Aforyzmy dotyczące matematyki</h1>
 
@@ -167,6 +166,5 @@ logiczne struktury straciłyby całą swą skuteczność, stałyby się spekulac
 sztuki liczenia i sztuki logicznego widzenia - należy uznać za cud, któremu nasza kultura tak wiele zawdzięcza. </i> 
 <br/><b> M. Heller </b></blockquote>
 
-  </body>
 
 
