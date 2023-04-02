@@ -1,12 +1,11 @@
 ---
 layout: page
 title: "Aforyzmy matematycznee"
-permalink:/new_page/
+permalink: /new_page/
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{title}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
     <meta name="Description" content="Strona zawiera wypowiedzi wybitnych postaci nauki i filozofii dotyczące matematyki" />
     <meta name="Keywords" content="matematyka, logika, przyroda" />
