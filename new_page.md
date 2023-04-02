@@ -1,6 +1,21 @@
 layout: page
-title: "A new page"
+title: "Aforyzmy matematycznee"
 permalink:/new_page/
+
+<!DOCTYPE html 
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="scrollbar-base-color: #BBBBBB">
+  <head>
+    <title>{{title}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+    <meta name="Description" content="Strona zawiera wypowiedzi wybitnych postaci nauki i filozofii dotyczące matematyki" />
+    <meta name="Keywords" content="matematyka, logika, przyroda" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Paweł Marcin" />
+    <link rel="Stylesheet" type="text/css" href="Style1.css" />
+  </head>
+  <body>
 
 <h1>Aforyzmy dotyczące matematyki</h1>
 
@@ -165,6 +180,9 @@ jednym ani drugim tylko, lecz organiczną syntezą. Bez logicznych struktur miel
 logiczne struktury straciłyby całą swą skuteczność, stałyby się spekulacjami mało różnymi od innych jałowych dociekań. Zespolenie się tych dwóch elementów 
 sztuki liczenia i sztuki logicznego widzenia - należy uznać za cud, któremu nasza kultura tak wiele zawdzięcza. </i> 
 <br/><b> M. Heller </b></blockquote>
+
+  </body>
+</html>
 
 
 
