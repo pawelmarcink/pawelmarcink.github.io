@@ -1,10 +1,6 @@
 layout: page
 title: "A new page"
 permalink:/new_page/
-<!DOCTYPE html 
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html style="scrollbar-base-color: #BBBBBB">
   <body>
 
 <h1>Aforyzmy dotyczące matematyki</h1>
@@ -172,6 +168,5 @@ sztuki liczenia i sztuki logicznego widzenia - należy uznać za cud, któremu n
 <br/><b> M. Heller </b></blockquote>
 
   </body>
-</html>
 
 
