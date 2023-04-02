@@ -11,8 +11,7 @@ permalink:/new_page/
     <meta name="Description" content="Strona zawiera wypowiedzi wybitnych postaci nauki i filozofii dotyczące matematyki" />
     <meta name="Keywords" content="matematyka, logika, przyroda" />
     <meta http-equiv="Content-Language" content="pl" />
-    <meta name="Author" content="Paweł Marcin" />
-    <meta http-equiv="Reply-To" content="pawel_m_kozyra@wp.pl" />
+    <meta name="Author" content="Paweł Marcin" />>
     <link rel="Stylesheet" type="text/css" href="Style1.css" />
   </head>
   <body>
