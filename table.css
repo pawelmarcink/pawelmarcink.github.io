@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* Style dla wszystkich urządzeń. */ 
+table { border-collapse: collapse; } 
+/* Style dla małych urządzeń. */  
+@media (max-width:720px){
+  table { border: none; }
+  /* Wyświetlenie całej tabeli jako bloku. */
+  table, thead, tbody, th, td, tr { display: block; }
+  /* Ukrycie nagłówków. */
+  thead tr { position: absolute; top: -9999px; left: -9999px; }
+  tr { border: 1px solid #ccc; margin-bottom: 1em; }
+  tr:nth-of-type(odd) { background: #eee; }
+  td {
+    /* Zachowanie naśladujące "wiersz". */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 20%;
+  }
+  td:before {
+    /* Teraz podobnie jak nagłówek tabeli. */
+    position: absolute;
+    /* Wartości top i left odpowiadają wartościom dopełnienia. */
+    top: 1px;
+    left: 2px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  /* Etykiety dla danych. */
+  td:nth-of-type(1):before { content: "Autorzy "; }
+  td:nth-of-type(2):before { content: "Tytuł "; }
+  td:nth-of-type(3):before { content: "Czasopismo " ; }
+  td:nth-of-type(4):before { content: "DOI "; } 
+  td:nth-of-type(5):before { content: "Rok wyd. "; } 
+  td:nth-of-type(6):before { content: "Numer "; }
+} 
+/* Style dla większych urządzeń. */ 
+@media (min-width:721px) {
+  tr:nth-child(2n+1) { background-color: #809fd8; color: #ffffff }
+  tr:nth-child(2n+1) a { background-color: #809fd8; color: #ffffff }
+  tr:nth-child(2n) { background-color: #ffffff; color: #809fd8 }
+  tr:nth-child(2n) a { background-color: #ffffff; color: #809fd8 }
+  table thead tr:nth-child(n) { background-color: #525d1b; color: #ffffff; }
+
+table.sortable th:hover {
+	cursor: pointer;}
+th.ascending, th.descending, table.sortable th:hover {
+	background-color: #809fd8;
+	color: #fff;}
+
+/* Strzałki używane do sortowania tabeli */
+th.ascending:after {
+	font-size: 60%;
+    content: '\25B2';
+    float: left;
+	padding: 4px 5px 0px 0px;}
+th.descending:after {
+	font-size: 60%;
+    content: '\25BC';
+    float: left;
+	padding: 4px 5px 0px 0px;}
+}

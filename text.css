@@ -1,0 +1,16 @@
+@charset "UTF-8";
+h1{ margin: 1em 0 1em 0; position: static; padding-bottom:1em;text-align: center;}
+h1   { color: #809fd8; font-size: 125%;font-family:French Script MT,Optima, sans-serif; }
+h2 { margin-top: 0;font-size: 100%; }
+p  { font-size: 70%; line-height: 1.4; margin-top: 0; text-align: justify;color: black;}
+h3 {margin-top: 1em; margin-bottom: 0.4em;font-size: 80%;line-height: 1.3;}
+.page {
+      width: 70%;
+      margin: 30px auto 30px auto;}
+
+@media all and (min-width:416px) {
+h1 {font-size: 250%;}
+h2 { font-size: 200%; }
+h3 {font-size: 160%;}
+p  { font-size: 90%;}
+}

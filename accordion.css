@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**********  Panel typu accordion **********/
+.accordion, .menu {
+  background-color: #809fd8;
+  color: #000;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;}
+
+.accordion li {
+  padding: 0px;
+  list-style-type: none;}
+
+.accordion li a {color: black;}
+
+.accordion-control {
+  background-color: #525d1b;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0px;
+  border-top: 1px solid #000;}
+
+.accordion-panel {
+  display: none;}
+
+.accordion-panel p {
+  margin: 20px;}
+
+.accordion-panel img {
+  display: block;
+  clear: left;}

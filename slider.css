@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/********** Suwak **********/
+body{background-color:black;}
+.slider {
+  width: 763px;
+  margin: 0px auto 0px auto;
+  max-width: 2288px;
+  max-height: 1712px;z-index: 99999999;
+  }
+
+.slide-viewer {
+    position: relative; /* needed for IE7 */
+    overflow: hidden;
+    height: auto;z-index: 99999999;}
+
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;z-index: 99999999;}
+
+.slide {
+    width: 100%;
+    height: 575px;
+    margin: 0px auto 0px auto;z-index: 99999999;}
+
+.slide:first-child {
+    display: block;}
+
+div.slide img {height: 571px; }
+
+
+/********** Przyciski **********/
+.slide-buttons {
+  text-align: center;z-index: 99999999;}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: #809fd8;
+  font-size: 200%;
+  line-height: 0.5em;
+  height:30px;z-index: 99999999;}
+
+.slide-btn.active, .slide-btn:hover {
+  color: #525d1b;
+  cursor: pointer;z-index: 99999999;}
