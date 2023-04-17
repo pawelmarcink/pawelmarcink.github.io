@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114591508-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114591508-1');
+</script>
+
+	<meta charset="UTF-8">
+	<meta name="Author" content="Paweł Marcin Kozyra" />
+  <link rel="stylesheet" href="css/text.css" type="text/css" >
+	<title>Twierdzenie o seriach</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+</head>
+<body>
+<h1>Twierdzenie o seriach</h1>
+Poniższy fragment pochodzi z mojego pierwszego artykułu <a  target="_blank" href="http://wydawnictwa.ptm.org.pl/index.php/matematyka-stosowana/article/view/393">P. Kozyra Mathematical aspects of musical scales and series (2014),  DOI: 10.14708/ma.v42i1.393. Mathematica Applicanda (Matematyka Stosowana). Annales Societatis
+Mathematicae Polonae Series III, VOL 42, NO 1 (2014) , 63-93 </a> . Składa się on zasadniczo z dwóch części. Pierwsza dotyczy matematycznych aspektów skal muzycznych, w szczególności skal o 
+ograniczonej transpozycyjności, zwanych tutaj skalami regularnymi. 
+Druga dotyczy budowania całej serii dźwięków poprzez transpozycję o stały interwał krótszej serii dźwięków. Kluczowe w tej 
+części jest twierdzenie 6.5, które powstało jako wynik moich przemyśleń dotyczących możliwości uzyskania całej serii 12 dźwięków w stroju równomiernie 
+temperowanym poprzez $k-1$ krotną transpozycję o stały interwał serii $m:=\frac{12}{k}$ dźwięków, gdzie $k$ jest oczywiście dzielnikiem liczby 12. 
+Procedurę tę nazywam dopełnieniem do serii w $k$ krokach. 
+W twierdzeniu tym sformułowałem 
+warunki konieczne i wystarczające na to, aby zadaną serię dźwięków można było dopełnić do serii. Pierwszy z warunków twierdzenia jest łatwy do sprawdzenia.
+Drugi z tych warunków otrzymałem analizując pod-serie, które można dopełnić do całej serii, a które nie spełniają warunku pierwszego. Uzyskałem je przy 
+pomocy napisanego przeze mnie programu komputerowego "Complete to series". W celu zrozumienia dowodu tego twierdzenia nie jest konieczna znajomość 
+żadnej wiedzy z zakresu matematyki wyższej. 
+<br/><br/>
+Jako przykład rozważmy serię 
+dźwięków mi-re-la, czyli e-d-a, która zainspirowała mnie do zajęcia się tym problemem. 
+Transponując 3-krotnie tę serię dźwięków o tercję małą otrzymujemy kolejno serie: g-f-c, b-as-es, des-h-ges. 
+Zatem łącznie z pierwszą serią otrzymujemy wszystkie dźwięki skali 12-stopniowej w stroju równomiernie temperowanym. 
+Przykłady zastosowań tego twierdzenia, jego sformułowania w języku serii muzycznych, jak również dalsze wnioski z niego wynikające można znaleźć we 
+wspomnianym artykule.
+<br/><br/>
+
+W celu uproszczenia i uściślenia problemu przeformułowałem go w poniższy sposób:<br/>
+<i><b>Definicja</b><br/>
+Załóżmy, że $n$, $m$ i $k$ są liczbami naturalnymi.
+Niech $\mathbb{Z}_n:=\{0,\ldots,n-1\}$, $S\subset \mathbb{Z}_n$ oraz $\#S=m$. Mówimy, że $S$ może być uzupełniony do $\mathbb{Z}_n$ w $k$ krokach, gdy
+$$\exists_{\substack{t\in \mathbb{N}\\t\mid m}}\colon \Big(\bigcup_{i=0}^{k-1}S_{i}^{t} = \mathbb{Z}_n \Big),$$
+gdzie $S_{i}^{t}:=\{x\in \mathbb{Z}_n\colon \exists_{a\in S}\colon x=(a+it)\bmod   n\}$, a $y \bmod n$ oznacza resztę z dzielenia $y$ przez $n$.</i>
+<br/><br/>
+Kontynuując powyższy przykład: dźwiękom c,cis,d,dis,e,f,fis,g,gis,a,b,h można przyporządkować liczby $0,1,2,3,4,5,6,7,8,9,10,11$. Zatem problem możliwości 
+dopełnienia dźwięków e-d-a do serii 12 dźwięków w 4 krokach można zinterpretować jako problem polegający na stwierdzeniu, czy zbiór $S:=\{4,2,9\}$ może 
+być uzupełniony do $\mathbb{Z}_{12}$ w $4$ krokach. Na podstawie pierwszego warunku z poniższego twierdzenia, w istocie istnieje taka możliwość, bowiem 
+różnice różnych elementów zbioru $S$ nie są podzielne bez reszty przez liczebność zbioru $S$ równą $3$, tj. $3\nmid (4-2)$, $3\nmid (9-2)$ oraz 
+$3\nmid (9-4)$.
+
+<br/><br/><i><br/><b>Twierdzenie</b><br/>
+Niech $m,n\in \mathbb{N}$, $m>1$, $m\mid n$, $k=n/m$, $S\subset \mathbb{Z}_n$ oraz $\#S=m$.
+Wówczas $S$ może być uzupełniony do $\mathbb{Z}_n$ w $k$ krokach wtedy i tylko wtedy, gdy
+<ol style="list-style-type: decimal">
+<li>  $\forall_{x,y\in S}\big(x\neq y \Longrightarrow m\nmid (x-y)\big)$ </li>
+lub
+<li>$\exists_{S'\subsetneq S}\forall_{m'}\forall_{n'}\colon \bigg(\Big(m'=\#S'\ \land\ n'=km'\big) \Longrightarrow 
+\Big(m'\mid m \ \land\  \bigcup_{i=0}^{m/m'-1}~\big(~S'~+~in'~\big)~=~S$ 
+i $S'$ może być uzupełniony do $\mathbb{Z}_{n'}$ w $k$ krokach $\Big)\bigg)$.</li>
+</ol></i>
+<i><br/><b>Proof</b><br/></i>
+Denote $(x+y)\bmod   p$ $\big((x-y)\bmod   p\big)$ by $x+_{p} y$ $\big(x-_{p} y\big)$, for any $x,y\in \mathbb{Z}$ and $p\in \mathbb{N}$.
+<br/>($\Longrightarrow$)<br/>
+<ol style="list-style-type: decimal">
+  <li>Assume that $S$ may be completed to $\mathbb{Z}_n$ in $k$ steps and that $\exists_{x,y\in S}\big(x\neq y \land m\mid (x-y)\big)$. <br/> Let $t\in\mathbb{N}$ be such that $t\mid m$ and $\Big(\bigcup_{i=0}^{k-1}(S+_n it)= \mathbb{Z}_n \Big)$.</li>
+  <li>I shall show that $t&lt;m$: <br/>Suppose that $t=m$. Let $x,y \in S$ be such that $m\mid (x-y)$. Assume that $x&gt;y$. Then $x-y=lm$ for some $l&lt;k$. We obtain $S\cap (S+_{n}lt)\neq \emptyset$, hence $S$ could not be completed to $\mathbb{Z}_n$ in $k$ steps. It follows that  $t&lt;m$, since $t\mid m$. </li>
+  <li> Let $S:=\{x_0,\ldots,x_{m-1}\}$ and $x_{m-1}>\ldots>x_0$. </li>
+<li> Now I will show that:
+$$\exists_{i&lt;m}\colon (x_{(i+1)\bmod   m}-_n x_i\neq k) \Longrightarrow \exists_{i&lt m}\colon (x_{(i+1)\bmod   m}-_n x_i &lt k).$$
+Assume that $x_{(i+1)\bmod   m}-_n x_i > k$ for some $i&lt;m$ and  $x_{(j+1)\bmod   m}-_n x_j \geq k$ for all $j&lt m$.
+If $i&lt;m-1$, then $x_{m-1}-x_0\geq (m-1)k+1$. So $x_0-_n x_{m-1}=n-x_{m-1}+x_0\leq k-1$---this is a contradiction. 
+If $i=m-1$, then $x_0-_n x_{m-1}\leq k$---this is a contradiction. </li>
+<li> I shall prove that $\exists_{i&lt;m}\colon (x_{(i+1)\bmod   m}-_n x_i\neq k) \Longrightarrow t>1$.
+<br/>Suppose that $\exists_{i&lt; m}\colon (x_{(i+1)\bmod   m}-_n x_i\neq k)$ and $t=1$. Then by (4), $\exists_{i&lt; m}\colon (x_{(i+1)\bmod   m}-_n x_i =l< k)$. 
+So $S\cap (S+_{n}l)\neq \emptyset$, thus $S$ cannot be completed to $\mathbb{Z}_n$ in $k$ steps ---this is a contradiction.</li>
+<li> Suppose that $t=1$.
+<br/>Then by 5, $\forall_{i&lt;m}\colon (x_{(i+1)\bmod   m}-_n x_i= k)$. 
+Let $S':=\{x_0\}$, $m':=\#S'=1$ and $n'=km'=k$. 
+Then $\bigcup_{i=0}^{m/m'-1}\big(S'+in'\big) = S$ and $S'$ may be completed to $\mathbb{Z}_{n'}$ in $k$ steps.</li>
+<li> Suppose that $t>1$.
+<ol style="list-style-type: lower-alpha">
+<li> by 2, $1&lt;t&lt;m$.</li>
+<li> Let $\varphi\colon S\to \mathbb{Z}_t$ be defined in the following way: $\varphi(x):=x\bmod   t$, for $x\in S$.</li>
+<li> Let $S(a):=\bigcup_{i=0}^{k-1}(\varphi^{-1}(\{a\})+_n it)$, for all $a\in \mathbb{Z}_t$. </li>
+<li> Note that $\forall_{a\in \mathbb{Z}_t}\forall_{x\in S(a)}\colon x\bmod   t=a$. </li>
+<li> Note that $\forall_{a\in \mathbb{Z}_t}\forall_{i,j\in\mathbb{Z}_k}\colon \big(i\neq j \Longrightarrow (\varphi^{-1}(\{a\})+_n it) \cap (\varphi^{-1}(\{a\})+_n jt) = \emptyset \big)$, since $S$ may be completed to $\mathbb{Z}_n$.</li>
+<li> I will show that $\#\varphi^{-1}(\{a\})=\frac{m}t$ for all $a\in \mathbb{Z}_t$.
+<br/>Suppose that for some $a\in \mathbb{Z}_t$, $\#\varphi^{-1}(\{a\})>\frac{m}t$. Then $p=\#S(a)\geq k(\frac{m}t+1)=\frac{n}t+k$, since $S(a)$ is a sum of $k$ disjoint sets.
+Let $S(a):=\{y_{i_0},\ldots,y_{i_{p-1}}\}$ and $y_{i_0}&lt;\ldots &lt;y_{i_{p-1}}$. Then $n>y_{i_{p-1}}-y_{i_0}\geq (p-1)t\geq (\frac{n}t+k-1)t = n+(k-1)t$---this is a contradiction.
+So $\#\varphi^{-1}(\{a\})\leq\frac{m}t$ for all $a\in \mathbb{Z}_t$. But $S=\varphi^{-1}(\{0\})~~\cup~~\ldots~~\cup~~\varphi^{-1}(\{t-1\})$, therefore $\#\varphi^{-1}(\{a\})=\frac{m}t$ for all $a\in \mathbb{Z}_t$.</li>
+<li> $\#S(a)=\frac{n}t$, for all $a\in \mathbb{Z}_t$, since $S(a)$ is a sum of $k$ disjoint sets of cardinality $\frac{m}t$.</li>
+<li> We obtain $\forall_{a\in \mathbb{Z}_t}\exists_{y_a\in S}\colon S(a):=\{y_a,y_a+_n t,\ldots,y_a+_n(\frac{n}t-1)t\}$. </li>
+<li> Let $\varphi^{-1}(\{a\})=\{y_{a_0},\ldots,y_{a_{m/t-1}}\}$ for all $a\in \mathbb{Z}_t$.</li>
+<li> I will prove that $\forall_{a\in \mathbb{Z}_t}\forall_{i<\frac{m}t}\colon y_{a_{(i+1)\bmod   (m/t)}}-_n y_{a_i}\geq kt$. 
+<br/>If $a\in\mathbb{Z}_t$, $i<\frac{m}t$ and $y_{a_{(i+1)\bmod   (m/t)}}-_n y_{a_i}&lt; kt$, 
+then $y_{a_{(i+1)\bmod   (m/t)}}-_n y_{a_i}= lt$ for some $0&lt;l&lt;k$. We have $\varphi^{-1}(\{a\})\cap(\varphi^{-1}(\{a\})+_n lt)\neq\emptyset$ --- this contradicts (e).</li>
+<li> $\forall_{a\in \mathbb{Z}_t}\forall_{i&lt;\frac{m}t}\colon y_{a_{(i+1)\bmod   (m/t)}}-_n y_{a_i}= kt$:
+<br/>Suppose that $a\in \mathbb{Z}_t$, $i&lt;\frac{m}t-1$ and $y_{a_{(i+1)\bmod   (m/t)}}-_n y_{a_i}>kt$.
+Then $y_{a_{m/t-1}}-_n y_{a_0}\geq (\frac{m}t-1)kt+1=n-kt+1$. We obtain $y_{a_0}-_n y_{a_{m/t-1}}=n-y_{a_{m/t-1}}+y_{a_0}\leq kt-1$---this contradicts (j).
+If $i=\frac{m}t-1$, then $y_{a_{m/t-1}}-_n y_{a_0}\geq n-kt$. So $kt&lt;y_{a_0}-_n y_{a_{m/t-1}}=n-y_{a_{m/t-1}}+y_{a_0}\leq kt$---this is a contradiction.</li>
+<li> Hence $\forall_{a\in \mathbb{Z}_t}\exists_{y_a\in S}\colon \varphi^{-1}(\{a\})=\{y_a+_n ikt\colon i\in\mathbb{Z}_{\frac{m}t}\}$.</li>
+<li> Let $S':=\{y_a\colon a\in \mathbb{Z}_t\}$, $n':=tk$. </li>
+<li> Of course, $S'\cup (S'+n')\cup\ldots\cup (S'+(\frac{m}t-1)n')=S$.</li>
+<li> $S'$ may be completed to $\mathbb{Z}_{n'}$ in $k$ steps:
+<br/>Suppose that $y_a+_{n'}it=y_b+_{n'}jt$ for some $a,b\in \mathbb{Z}_t$ and $i,j&lt;k$. Then $t\mid (y_b-y_a)$, hence $\varphi(y_a)=\varphi(y_b)$, thus $a=b$.
+Therefore, $it-q_1n'=jt-q_2n'$ for some natural numbers $q_1,q_2\in\mathbb{N}$. We can assume that $q_2\geq q_1$. 
+Thus we have $(j-i)t=(q_2-q_1)n'$. But $0\leq j-i&lt;k$ and $n'=tk$, hence $q_2-q_1=0$ and $i=j$.</li>
+</ol>
+</li>
+</ol>
+($\Longleftarrow$)
+<ol style="list-style-type: decimal">
+  <li>Assume that $\forall_{x,y\in S}\big(x\neq y \Longrightarrow m\nmid (x-y)\big)$.
+Suppose that $x+_n im = y+_n jm$ for some $x,y\in S$ and $i,j&lt;k$. Then $m\mid (x-y)$, thus $x=y$.
+So $im-q_1n=jm-q_2n$, hence $(j-i)m=(q_2-q_1)n$ for some $q_1,q_2\in\mathbb{N}$. But $|i-j|&lt;k$, thus we obtain $q_1=q_2$ and $i=j$.
+Hence $S$ may be completed to $\mathbb{Z}_n$ in $k$ steps.</li>
+ <li>Assume that 
+$\exists_{S'\subsetneq S}\colon \Big(\#S'=:m'\ \land\ m'\mid m \ \land\ n':=km' \ \land\  
+\bigcup_{i=0}^{m/m'-1}\big(S'+in'\big) = S$ 
+and $S'$ may be completed to $\mathbb{Z}_{n'}$ in $k$ steps$\Big)$.
+Let $t\mid m'$ be such that $\Big(\bigcup_{i=0}^{k-1}S'+_{n'}it = \mathbb{Z}_{n'} \Big)$.
+Suppose that $x+_n it = y+_n jt$ for some $x,y\in S$ and $i,j&lt;k$.
+Then $x'+an'+ it-q_1n = y'+bn'+ jt-q_2n$ for some $a,b<\frac{m}{m'}$, $x',y'\in S'$ and $q_1,q_2\in\mathbb{N}$.
+So $x'+it-(y'+jt)=(q_1-q_2)n+(b-a)n'$. Thus $x'+it\equiv y'+jt\pmod{n'}$.
+So $x'=y'$ and $i=j$, since $S'$ may be completed to $\mathbb{Z}_{n'}$ in $k$ steps.
+Hence $(a-b)n'=(q_1-q_2)n$. But $|a-b|<\frac{m}{m'}$, thus it follows that $|(a-b)n'|&lt;n$. Therefore, $q_1=q_2$ and $a=b$.
+Thus $x=y$. Hence $S$ may be completed to $\mathbb{Z}_n$ in $k$ steps.$\blacksquare$</li>
+</ol>
+
+</body>
+</html>
